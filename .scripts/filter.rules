@@ -1,8 +1,10 @@
 ## Rsync Filter for $HOME
 
-# 
-- dev
 - bash_completion.sh
+- dotfiles
++ helsana/delivery/***
+
+- dev
 
 # Universal excludes -- These apply to all subdirs
 - [Cc]ache
@@ -85,7 +87,6 @@
 - .ngrok2
 - .npm
 - .oh-my-zsh
-+ .oh-my-zsh/themes/agnoster.zsh-theme
 - .oracle_jre_usage
 - .sdkman
 - .siege
