@@ -2,7 +2,9 @@
 # DST=/Volumes/Home/rsync_test/
 # rsync --dry-run --verbose --recursive --filter='merge somerules.rules' $SRC $DST
 
-- bin
++/ bin/output
+-/ bin/*
+
 - *.log
 - home/README.md
 - home/john/backup
