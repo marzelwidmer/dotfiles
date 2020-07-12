@@ -1,6 +1,6 @@
 #!/bin/bash
 SRC="$HOME"
-DST="/Volumes/Home/"
+DST="/Volumes/AirPort/morpheus"
 EXCLUDE_FILE="$HOME/dotfiles/.scripts/rsync.excl"
 
 fswatch -0 $SRC | while read -d "" event; do
