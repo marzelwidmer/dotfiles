@@ -5,13 +5,15 @@ RSYNC_INCLUDE_FILE=rsync.incl
 RSYNC_EXCLUDE_FILE=rsync.excl
 
 fswatch -0 $SRC | while read -d "" event; do
-#   rsync -vrthP --include-from=$RSYNC_INCLUDE_FILE  --exclude="*" "$SRC" "$DST"
-  rsync -avP --include="Demultiplexing" \
+    rsync -ravuzhHSPn --filter='merge somerules.rules' $SRC $DST
+  
+done
+
+
+rsync -avP --include="Demultiplexing" \
      --exclude=".*" \
      -exclude="*:*" \
      "$SRC" "$DST"
-done
-
 
 rsync --dry-run --verbose --recursive --filter='merge somerules.rules' $SRC $DST
 
