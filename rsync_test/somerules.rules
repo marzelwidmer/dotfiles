@@ -1,0 +1,14 @@
+# SRC=/Users/morpheus/dotfiles/rsync_test
+# DST=/Volumes/Home/rsync_test/
+# rsync --dry-run --verbose --recursive --filter='merge somerules.rules' $SRC $DST
+
+- bin
+- *.log
+- home/README.md
+- home/john/backup
+- temp
+- tmp/
+- .cache
+- .Trash
+- .DS_Store
+- .home-rsync-filter
