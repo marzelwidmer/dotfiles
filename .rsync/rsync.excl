@@ -15,6 +15,30 @@ Public
 go
 hob
 
+# Universal excludes -- These apply to all subdirs
+[Cc]ache
+temp
+tmp
+*.log
+logs/**
+
 ## Hidden Folders
 .Trash
 .DS_Store
+.m2
+.gradle
+.npm
+.konan
+.groovy
+.kube/http-cache/
+.anchore
+.android
+.atom
+.dropbox
+.embedmongo
+.minikube
+.minishift
+.crc
+.sdkman
+.vscode
+.kscript
