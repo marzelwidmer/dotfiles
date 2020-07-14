@@ -1,5 +1,10 @@
 ## Rsync Filter for $HOME
 
+- bash_completion.sh
+- dotfiles
++ helsana/delivery/***
+- dev
+
 # Universal excludes -- These apply to all subdirs
 - [Cc]ache
 - temp
