@@ -10,14 +10,15 @@ then
     # rsync -ravuzhHSP --delete-after --delete-excluded --exclude-from=$EXCLUDE_FILE $SRC $DST 
     # rsync -ravuzhHSP  --delete-after --delete-excluded  --filter="merge $FILTER_RULE" $SRC $DST
     rsync -ravuzhPE  --delete-after --delete-excluded  --filter="merge $FILTER_RULE" $SRC $DST_AIRPORT
-    /usr/bin/say -v "Oliver" "AirPort Sync, is Done"
+    say -v "Anna" "Die arbeits Artefakte wurden erfolgreich synchronisiert."
+    /usr/bin/say -v 
 
     rsync -ravuzhPE  --delete-after --delete-excluded  --filter="merge $FILTER_RULE" $SRC $DST
-    /usr/bin/say -v "Lee" "Hera Sync, is Done"
+    /usr/bin/say -v "Whisper" "Your data is successfully synchronized"
    
 else
     /usr/bin/osascript -e 'display notification "Some problem with file sync!" with title "Sync"'
-    /usr/bin/say -v "Good News" "Synchronisation have some problems."
+    /usr/bin/say -v "lee" "Holy moly ... Houston we have a problem."
 fi
 
 
