@@ -2,7 +2,7 @@
 
 - bash_completion.sh
 - dotfiles
-+ helsana/delivery/***
++ helsana/***
 + helsana/dev/***
 - dev
 
