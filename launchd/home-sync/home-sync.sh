@@ -5,7 +5,7 @@ FILTER_RULE="$HOME/dotfiles/launchd/home-sync/filter.rules"
 
 if [ -d  $DST ]
 then
-   	/usr/bin/osascript -e 'display notification "Home sync is started" with title "Home Sync"'
+#   	/usr/bin/osascript -e 'display notification "Home sync is started" with title "Home Sync"'
     rsync -ravuzhPE  --delete-after --exclude "helsana"  --log-file=/tmp/airport-home.log --filter="merge $FILTER_RULE" $SRC $DST_AIRPORT
     rsync -ravuzhPE  --delete-after --exclude "helsana"  --log-file=/tmp/hera-home.log --filter="merge $FILTER_RULE" $SRC $DST
 
