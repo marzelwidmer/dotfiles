@@ -40,3 +40,43 @@ launchctl list | grep airport-work-sync
 ```
 launchctl unload -w ~/Library/LaunchAgents/airport-work.sync.plist
 ```
+
+
+
+
+
+
+
+# airport-home.sync.plist
+```
+cp dotfiles/launchd/airport-home-sync/airport-home.sync.plist  ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/airport-home.sync.plist 
+
+```
+# Log
+```
+tail -f /tmp/airport-work-sync.out
+```
+# Error Log
+```
+tail -f /tmp/airport-work-sync.err
+```
+
+
+
+# hera-home.sync.plist
+```
+cp dotfiles/launchd/hera-home-sync/hera-home.sync.plist  ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/hera-home.sync.plist 
+
+```
+# Log
+```
+tail -f /tmp/hera-work-sync.out
+```
+# Error Log
+```
+tail -f /tmp/hera-work-sync.err
+
+
+

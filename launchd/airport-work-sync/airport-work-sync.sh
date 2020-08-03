@@ -1,12 +1,12 @@
 SRC="$HOME"
-DST="/Volumes/AirPort/morpheus/helsana/delivery/"
+DST="/Volumes/AirPort/"
 FILTER_RULE="$HOME/dotfiles/launchd/airport-work-sync/filter.rules"
 
 
 if [ -d  $DST ]
 then
    	/usr/bin/osascript -e 'display notification "Delivery sync is started" with title "Delivery Rsync"'
-    rsync -ravuzhPE  --delete-after --delete-excluded --log-file=/tmp/airport-rsync.log --filter="merge $FILTER_RULE" $SRC $DST
+    rsync -ravuzhPE  --delete-after --delete-excluded --log-file=/tmp/airport-work.log --filter="merge $FILTER_RULE" $SRC $DST
 #	  /usr/bin/say -v "lee" "Delivery directory is successfully synchronized."
 
 else

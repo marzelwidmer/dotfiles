@@ -6,7 +6,7 @@
     <string>airport-work-sync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/morpheus/dotfiles/launchd/airport-work-sync/airport-home-sync.sh</string>
+        <string>/Users/morpheus/dotfiles/launchd/airport-work-sync/airport-work-sync.sh</string>
     </array>
     <key>WatchPaths</key>
     <array>
