@@ -8,7 +8,6 @@ then
    	/usr/bin/osascript -e 'display notification "Home Hera  sync is started" with title "Home Hera Rsync"'
     rsync -ravuzhPE  --delete-after --delete-excluded --log-file=/tmp/airport-rsync.log --filter="merge $FILTER_RULE" $SRC $DST
 
-   	/usr/bin/osascript -e 'display notification "Home Hera  Sync is Done" with title "Home Hera Rsync"'
 	  /usr/bin/say -v "lee" "Home Hera directory is successfully synchronized."
 
 else

@@ -7,9 +7,7 @@ if [ -d  $DST ]
 then
    	/usr/bin/osascript -e 'display notification "Home AirPort  sync is started" with title "Home AirPort Rsync"'
     rsync -ravuzhPE  --delete-after --delete-excluded --log-file=/tmp/airport-rsync.log --filter="merge $FILTER_RULE" $SRC $DST
-
-   	/usr/bin/osascript -e 'display notification "Home AirPort  Sync is Done" with title "Home AirPort Rsync"'
-	  /usr/bin/say -v "lee" "Home AirPort directory is successfully synchronized."
+    /usr/bin/say -v "lee" "Home AirPort directory is successfully synchronized."
 
 else
     /usr/bin/osascript -e 'display notification "Some problem with home sync!" with title "Rsync"'

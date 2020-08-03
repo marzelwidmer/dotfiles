@@ -1,6 +1,6 @@
-## Rsync Filter for $HOME
+## Rsync Filter
 
-+ helsana/delivery/***
+
 - bash_completion.sh
 - dotfiles
 - dev
