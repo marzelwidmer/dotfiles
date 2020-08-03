@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>hera-home-sync</string>
+    <string>work-delivery-sync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/morpheus/dotfiles/launchd/hera-home-sync/hera-home-sync.sh</string>
+        <string>/Users/morpheus/dotfiles/launchd/work-delivery-sync/airport-sync.sh</string>
     </array>
     <key>WatchPaths</key>
     <array>
         <string>/Users/morpheus</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/tmp/hera-home-sync.err</string>
+    <string>/tmp/airport-work-delivery-sync.err</string>
     <key>StandardOutPath</key>
-    <string>/tmp/hera-home-sync.out</string>
+    <string>/tmp/airport-work-delivery-sync.out</string>
 </dict>
 </plist>

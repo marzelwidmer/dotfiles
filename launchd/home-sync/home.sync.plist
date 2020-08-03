@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>airport-home-sync</string>
+    <string>home-sync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/morpheus/dotfiles/launchd/airport-home-sync/airport-home-sync.sh</string>
+        <string>/Users/morpheus/dotfiles/launchd/home-sync/home-sync.sh</string>
     </array>
     <key>WatchPaths</key>
     <array>
         <string>/Users/morpheus</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/tmp/airport-home-sync.err</string>
+    <string>/tmp/home-sync.err</string>
     <key>StandardOutPath</key>
-    <string>/tmp/airport-home-sync.out</string>
+    <string>/tmp/home-sync.out</string>
 </dict>
 </plist>

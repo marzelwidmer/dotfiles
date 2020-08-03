@@ -6,7 +6,7 @@ The easiest way to fix this is by giving bin/sh Full Disk Access in System Prefe
 
 # Copy airport-work.sync.plist
 ```
-cp dotfiles/launchd/airport-work-sync/airport-work.sync.plist ~/Library/LaunchAgents
+cp dotfiles/launchd/work-delivery-sync/airport-delivery.sync.plist ~/Library/LaunchAgents
 ```
 
 # System.log
@@ -16,18 +16,18 @@ tail -f /var/log/system.log
 
 # Load
 ```
-launchctl load -w ~/Library/LaunchAgents/airport-work.sync.plist
+launchctl load -w ~/Library/LaunchAgents/airport-delivery.sync.plist
 ```
 
 # Log
 ```
-tail -f /tmp/airport-work-sync.out
+tail -f /tmp/airport-delivery-sync.out
 ```
 
 
 # Error Log
 ```
-tail -f /tmp/airport-work-sync.err
+tail -f /tmp/airport-delivery-sync.err
 ```
 
 
@@ -42,17 +42,12 @@ launchctl unload -w ~/Library/LaunchAgents/airport-work.sync.plist
 ```
 
 
-
-
-
-
-
-# airport-home.sync.plist
+# airport-work.sync.plist
 ```
-cp dotfiles/launchd/airport-home-sync/airport-home.sync.plist  ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/airport-home.sync.plist 
-
+cp dotfiles/launchd/work-sync/airport-work.sync.plist  ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/airport-work.sync.plist 
 ```
+
 # Log
 ```
 tail -f /tmp/airport-work-sync.out
@@ -64,11 +59,14 @@ tail -f /tmp/airport-work-sync.err
 
 
 
+
+
+
+
 # hera-home.sync.plist
 ```
-cp dotfiles/launchd/hera-home-sync/hera-home.sync.plist  ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/hera-home.sync.plist 
-
+cp dotfiles/launchd/home-sync/home.sync.plist  ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/home.sync.plist
 ```
 # Log
 ```
@@ -77,6 +75,7 @@ tail -f /tmp/hera-work-sync.out
 # Error Log
 ```
 tail -f /tmp/hera-work-sync.err
+
 
 
 

@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>airport-work-sync</string>
+    <string>work-sync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/morpheus/dotfiles/launchd/airport-work-sync/airport-work-sync.sh</string>
+        <string>/Users/morpheus/dotfiles/launchd/work-sync/airport-sync.sh</string>
     </array>
     <key>WatchPaths</key>
     <array>

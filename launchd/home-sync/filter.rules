@@ -1,8 +1,12 @@
-## Rsync Filter
+## Rsync Filter for $HOME
 
++ dotfiles
++ .oh-my-zsh
++ .tmux.conf
++ .ssh
++ .zshrc
 
 - bash_completion.sh
-- dotfiles
 - dev
 
 # Universal excludes -- These apply to all subdirs
@@ -85,7 +89,6 @@
 - .native-image
 - .ngrok2
 - .npm
-- .oh-my-zsh
 - .oracle_jre_usage
 - .sdkman
 - .siege
@@ -93,11 +96,9 @@
 - .soapuios
 - .software
 - .sonarlint
-- .ssh
 - .sts4
 - .subversion
 - .testcontainers.properties
-- .tmux.conf
 - .tooling
 - .vault-token
 - .viminfo
@@ -113,5 +114,4 @@
 - .zcompdump-MacBookPro-5.8
 - .zsh
 - .zsh_history
-- .zshrc
 - .zshrc.pre-oh-my-zsh
