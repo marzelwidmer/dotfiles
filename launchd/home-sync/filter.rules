@@ -8,6 +8,7 @@
 
 - bash_completion.sh
 - dev
+- git
 
 # Universal excludes -- These apply to all subdirs
 - [Cc]ache
