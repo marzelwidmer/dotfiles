@@ -13,7 +13,7 @@ then
 
 else
     /usr/bin/osascript -e 'display notification "Some problem with home sync!" with title "Home Sync"'
-	  /usr/bin/say -v "lee" "Holy molly ... Houston we have a problem with synchronisation of home directory."
+	  /usr/bin/say -v ""Tessa"" "Holy molly ... Houston we have a problem with synchronisation of home directory."
 fi
 
 

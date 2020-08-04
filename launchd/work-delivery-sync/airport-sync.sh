@@ -13,7 +13,7 @@ then
 
 else
     /usr/bin/osascript -e 'display notification "Some problem with delivery sync!" with title "Delivery Sync"'
-	  /usr/bin/say -v "lee" "Holy molly ... Houston we have a problem with synchronisation of delivery directory."
+	  /usr/bin/say -v "Veena" "Holy molly ... Houston we have a problem with synchronisation of delivery directory."
 fi
 
 
