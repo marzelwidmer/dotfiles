@@ -1,3 +1,5 @@
+#!/bin/sh
+
 SRC="$HOME"
 DST="/Volumes/Home/"
 DST_AIRPORT="/Volumes/AirPort/"
