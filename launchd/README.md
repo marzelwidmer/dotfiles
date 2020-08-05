@@ -2,6 +2,12 @@ https://www.systemcodegeeks.com/mac-os/macos-sync-files-between-two-volumes-usin
 
 The easiest way to fix this is by giving bin/sh Full Disk Access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
 
+Check also `launchcontrol`
+```
+brew cask install launchcontrol
+```
+
+
 # airport-work.sync.plist
 
 # Copy airport-work.sync.plist
