@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 SRC="$HOME/helsana/"
 DST="/Volumes/AirPort/morpheus/helsana"
 
