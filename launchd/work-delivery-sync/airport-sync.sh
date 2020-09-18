@@ -6,7 +6,7 @@ DST="/Volumes/AirPort/morpheus/helsana"
 if [ -d  $DST ]
 then
 #   	/usr/bin/osascript -e 'display notification "Delivery sync is started" with title "Delivery Sync"'
-   	rsync -az --delete-after --exclude "dev"  --log-file=/tmp/airport-delivery.log  $SRC $DST
+   	rsync -az --delete-after --exclude "dev" --exclude "azure" --exclude "gitlab"  --log-file=/tmp/airport-delivery.log  $SRC $DST
 #    rsync -ravuzhPE --delete-after --delete-excluded --log-file=/tmp/airport-work-delivery.log --filter="merge $FILTER_RULE" $SRC $DST
 #  --dry-run
 # rsync -az --exclude "delivery"  --log-file=/tmp/airport-work-delivery.log  $HOME/helsana/ /Volumes/AirPort/morpheus/helsana
