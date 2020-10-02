@@ -1,0 +1,2 @@
+# https://github.com/jonas/tig/blob/master/tigrc
+bind branch n !@git branch %(prompt)
