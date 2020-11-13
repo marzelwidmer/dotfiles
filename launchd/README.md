@@ -8,11 +8,11 @@ brew cask install launchcontrol
 ```
 
 
-# airport-work.sync.plist
+# work-delivery-sync.plist
 
 # Copy airport-work.sync.plist
 ```
-cp dotfiles/launchd/work-delivery-sync/airport-delivery.sync.plist ~/Library/LaunchAgents
+cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist ~/Library/LaunchAgents
 ```
 
 # System.log
@@ -22,66 +22,24 @@ tail -f /var/log/system.log
 
 # Load
 ```
-launchctl load -w ~/Library/LaunchAgents/airport-delivery.sync.plist
+launchctl load -w ~/Library/LaunchAgents/work-delivery-sync.plist
 ```
 
-# Log
+# Logs
 ```
-tail -f /tmp/airport-delivery-sync.out
-```
-
-
-# Error Log
-```
-tail -f /tmp/airport-delivery-sync.err
+tail -f /var/log/system.log
+tail -f /tmp/work-delivery-sync.log
+tail -f /tmp/work-delivery-sync.out
+tail -f /tmp/work-delivery-sync.err
 ```
 
 
 # List launchctl
 ```
-launchctl list | grep airport-work-sync
+launchctl list | grep work-delivery-sync
 ```
 
 # Unload
 ```
-launchctl unload -w ~/Library/LaunchAgents/airport-work.sync.plist
+launchctl unload -w ~/Library/LaunchAgents/work-delivery-sync.plist
 ```
-
-
-# airport-work.sync.plist
-```
-cp dotfiles/launchd/work-sync/airport-work.sync.plist  ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/airport-work.sync.plist 
-```
-
-# Log
-```
-tail -f /tmp/airport-work-sync.out
-```
-# Error Log
-```
-tail -f /tmp/airport-work-sync.err
-```
-
-
-
-
-
-
-
-# hera-home.sync.plist
-```
-cp dotfiles/launchd/home-sync/home.sync.plist  ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/home.sync.plist
-```
-# Log
-```
-tail -f /tmp/hera-work-sync.out
-```
-# Error Log
-```
-tail -f /tmp/hera-work-sync.err
-
-
-
-
