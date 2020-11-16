@@ -3,11 +3,10 @@
 SRC="$HOME/helsana/"
 DST="/Volumes/AirPort/morpheus/helsana"
 
-
 if [ -d  $DST ]
 then
 #   	/usr/bin/osascript -e 'display notification "Work sync is started" with title "Work Sync"'
-   	rsync -az --delete-after --exclude "delivery"  --log-file=/tmp/airport-work.log  $SRC $DST
+   	rsync -az --delete-after --exclude "delivery" --log-file=/tmp/work-sync.log  $SRC $DST
 #    /usr/bin/say -v "lee" "Work directory is successfully synchronized."
 
 else

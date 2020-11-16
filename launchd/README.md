@@ -10,7 +10,7 @@ brew cask install launchcontrol
 
 # work-delivery-sync.plist
 
-# Copy airport-work.sync.plist
+# Copy work-delivery.sync.plist
 ```
 cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist ~/Library/LaunchAgents
 ```
@@ -42,4 +42,18 @@ launchctl list | grep work-delivery-sync
 # Unload
 ```
 launchctl unload -w ~/Library/LaunchAgents/work-delivery-sync.plist
+```
+
+
+
+# work-sync.plist
+
+# Copy work.sync.plist
+```
+cp dotfiles/launchd/work-sync/work-sync.plist ~/Library/LaunchAgents
+```
+
+# Load
+```
+launchctl load -w ~/Library/LaunchAgents/work-sync.plist
 ```

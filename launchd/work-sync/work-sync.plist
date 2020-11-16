@@ -6,15 +6,15 @@
     <string>work-sync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/morpheus/dotfiles/launchd/work-sync/airport-sync.sh</string>
+        <string>/Users/morpheus/dotfiles/launchd/work-sync/work-sync.sh</string>
     </array>
     <key>WatchPaths</key>
     <array>
         <string>/Users/morpheus</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/tmp/airport-work-sync.err</string>
+    <string>/tmp/work-sync.err</string>
     <key>StandardOutPath</key>
-    <string>/tmp/airport-work-sync.out</string>
+    <string>/tmp/work-sync.out</string>
 </dict>
 </plist>
