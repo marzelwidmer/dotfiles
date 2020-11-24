@@ -14,8 +14,6 @@ brew cask install launchcontrol
 # Copy work-delivery.sync.plist
 ```
 cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist ~/Library/LaunchAgents
-or
-cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist /Library/LaunchAgents
 ```
 
 # System.log
@@ -26,8 +24,6 @@ tail -f /var/log/system.log
 # Load
 ```
 launchctl load -w ~/Library/LaunchAgents/work-delivery-sync.plist
-os
-launchctl load -w  /Library/LaunchAgents/work-delivery-sync.plist
 ```
 
 # Logs
