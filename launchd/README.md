@@ -1,6 +1,7 @@
 https://www.systemcodegeeks.com/mac-os/macos-sync-files-between-two-volumes-using-launchd-and-rsync/
 
-The easiest way to fix this is by giving bin/sh Full Disk Access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
+The easiest way to fix this is by giving `bin/sh` Full Disk Access in System Preferences > Security & Privacy > Privacy > Full Disk Access.
+
 
 Check also `launchcontrol`
 ```
