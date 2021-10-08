@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>home-sync</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/morpheus/dotfiles/launchd/home-sync/home-sync.sh</string>
+    </array>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/morpheus</string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/tmp/home-sync.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/home-sync.out</string>
+</dict>
+</plist>
