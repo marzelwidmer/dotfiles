@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>limactl</string><!-- this one should match the file name, sans .plist -->
+  <key>ProgramArguments</key>
+  <array>
+     <string>/Users/morpheus/dotfiles/launchd/limactl/limactl.sh</string><!-- good idea if this is similar to the Label -->
+  </array>
+  <key>StartInterval</key>
+  <integer>15</integer>
+  <key>StandardOutPath</key>
+  <string>/tmp/limactl.out</string>
+  <key>StandardErrorPath</key>
+   <string>/tmp/limactl.err</string>
+  <key>AbandonProcessGroup</key>
+  <true/>
+</dict>
+</plist>

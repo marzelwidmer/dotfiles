@@ -13,7 +13,7 @@ brew cask install launchcontrol
 
 # Copy work-delivery.sync.plist
 ```
-cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist ~/Library/LaunchAgents
+cp dotfiles/launchd/work-delivery-sync/work-delivery-sync.plist ~/Library/LaunchAgents 
 ```
 
 # System.log
