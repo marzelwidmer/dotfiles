@@ -1,0 +1,6 @@
+# Alias
+alias kctx=kubectx
+alias goGitHubDevHome="cd ~/dev/github"
+alias goAzureDevHome="cd ~/dev/azure"
+alias goMyHelsanaDevHome="cd ~/helsana/azure/myhelsana-root-repo"
+
