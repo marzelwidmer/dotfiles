@@ -2,6 +2,7 @@
 export SDKMAN_DIR="/Users/morpheus/.sdkman"
 [[ -s "/Users/morpheus/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/morpheus/.sdkman/bin/sdkman-init.sh"
 
+# brew install jandedobbeleer/oh-my-posh/oh-my-posh
 #  https://github.com/JanDeDobbeleer/oh-my-posh
 # https://ohmyposh.dev/docs/themes
 if [[ "WarpTerminal" ]]; then
