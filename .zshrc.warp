@@ -1,0 +1,38 @@
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/morpheus/.sdkman"
+[[ -s "/Users/morpheus/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/morpheus/.sdkman/bin/sdkman-init.sh"
+
+#  https://github.com/JanDeDobbeleer/oh-my-posh
+# https://ohmyposh.dev/docs/themes
+if [[ "WarpTerminal" ]]; then
+#   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
+  eval "$(oh-my-posh init zsh --config ~/dotfiles/oh-my-posh/themes/jandedobbeleer.omp.json)"
+fi
+
+ZSH_THEME="Agnoster"
+
+# PLUGINS
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	zsh-navigation-tools
+	oc
+	kubectl
+	brew
+	minikube
+	spring
+	git-prune
+	colored-man-pages
+	httpie
+	history
+	gradle
+	helm
+)
+
+# DOTFILES
+source ~/dotfiles/.aliases
+source ~/.helsana_variables
+
+# OH-MY-ZSH
+source ~/.oh-my-zsh/oh-my-zsh.sh
