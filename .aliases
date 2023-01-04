@@ -1,4 +1,4 @@
-# Alias
+brew # Alias
 alias kctx=kubectx
 alias goGitHubDevHome="cd ~/dev/github"
 alias goAzureDevHome="cd ~/dev/azure"
