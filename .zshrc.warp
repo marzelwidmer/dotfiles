@@ -17,6 +17,7 @@ else
     [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 fi
 
+# Node
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
@@ -44,7 +45,15 @@ source ~/dotfiles/.aliases
 # OH-MY-ZSH
 source ~/.oh-my-zsh/oh-my-zsh.sh
 
+# Docker Desktop
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
+# SDKMAN
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+###
+### Adding Java Tool Options to support Helsana trusted root cas
+###
+
+export JAVA_TOOL_OPTIONS="-Djavax.net.ssl.trustStore=/Users/hkesq/.ssl-java/truststore.p12 -Djavax.net.ssl.trustStorePassword=changeme -Djavax.net.ssl.trustStoreType=PKCS12"

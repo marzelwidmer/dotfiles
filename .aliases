@@ -2,7 +2,7 @@
 alias kctx=kubectx
 alias goGitHubDevHome="cd ~/dev/github"
 alias goAzureDevHome="cd ~/dev/azure"
-alias goMyHelsanaDevHome="cd ~/helsana/azure/myhelsana-root-repo"
+alias goMyHelsanaDevHome="cd ~/dev/helsana/azure/myhelsana-root-repo"
 
 # Kubernetes
 # brew install dty1er/tap/kubecolor
