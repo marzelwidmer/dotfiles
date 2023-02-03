@@ -12,15 +12,15 @@
           "background": "#ebcc34",
           "template": " \uFD31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
         },
-        {
-          "background": "#c386f1",
-          "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": " {{ .UserName }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "session"
-        },
+//        {
+//          "background": "#c386f1",
+//          "foreground": "#ffffff",
+//          "leading_diamond": "\ue0b6",
+//          "style": "diamond",
+//          "template": " {{ .UserName }} ",
+//          "trailing_diamond": "\ue0b0",
+//          "type": "session"
+//        },
         {
           "background": "#ff479c",
           "foreground": "#ffffff",
