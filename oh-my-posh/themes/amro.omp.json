@@ -5,6 +5,14 @@
       "alignment": "left",
       "segments": [
         // {
+        //   "type": "kubectl",
+        //   "style": "powerline",
+        //   "powerline_symbol": "\uE0B0",
+        //   "foreground": "#000000",
+        //   "background": "#ebcc34",
+        //   "template": " \uFD31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} "
+        // },
+        // {
         //   "foreground": "#45F1C2",
         //   "style": "plain",
         //   "template": "\uf508 {{ .UserName }} on",
