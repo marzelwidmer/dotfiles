@@ -1,0 +1,269 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+scan_timeout = 10_000
+command_timeout = 10_000
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_commit\
+(#9A348E)$kubernetes\
+$time\
+[❯ ](fg:#86BBD8)\
+"""
+
+[kubernetes]
+style = "italic green"
+format = ' | [☸](fg:#86BBD8) [$namespace]($style) | '
+disabled = false
+
+[time]
+disabled = false
+style = "dimmed green"
+time_format = "%R" # Hour:Minute Format
+format = " [$time]($style) | "
+
+[directory]
+format = "[$path]($style) "
+style = "italic yellow"
+truncate_to_repo = false
+truncation_length = 2 
+truncation_symbol = "…/"
+
+[git_branch]
+format = " | [$symbol$branch]($style) "
+
+[git_status]
+untracked = "[ ?${count}](italic red)"
+modified = "[ *${count}](italic bold red)"
+staged = "[ +${count}](italic bold green)"
+stashed = '\$${count}'
+behind = "[ ⇣${count}](italic red)"
+ahead = "[ ⇡${count}](italic green)"
+conflicted = "[ ⚔️${count}](italic bold red)"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+
+
+# [git_commit]
+# commit_hash_length = 4
+# # commit_hash_length = 8
+# style = "[ + ${count}](italic bold green)"
+# format = "$git_branch$git_status$directory$character"
+
+# [git_state]
+# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+# Replace the "❯" symbol in the prompt with "➜"
+# [character]      # The name of the module we are configuring is "character"
+# symbol = "➜"     # The "symbol" segment is being set to "➜"
+# error_symbol = "✗"
+# use_symbol_for_status = true
+# Displays text, typically a single character,
+# based on the status of the previous command.
+# success_symbol = "[▶](bold green)" # normal prompt
+# error_symbol = "[✗](bold red)" # used if previous command failed
+# error_symbol does not work in Nushell
+
+
+
+
+
+# git
+# [git_commit]
+# commit_hash_length = 4
+
+# format = "$git_branch$git_status$directory$character"
+
+
+# Displays current Git branch when in a directory of a Git repository.
+# [git_branch]
+# format = "[$symbol](green)[$branch]($style)"
+# style = "italic green"
+# symbol = ""
+# Displays status of Git repository when in a directory of a Git repository.
+# [git_status]
+# format = "[$all_status$ahead_behind]($style)"
+# untracked = "⊁ $count "
+
+# conflicted = "🏳"
+# ahead = "🏎💨"
+# ahead = "⇡ $count "
+# behind = "😰"
+# behind = "⇣ $count "
+# diverged = "😵 $count "
+# stashed = "📦 $count "
+# modified = "📝 $count "
+# renamed = "👅 $count "
+# deleted = "🗑 $count "
+
+
+
+
+
+
+
+
+
+
+
+# format = "$git_branch$git_status$directory$character"
+
+# # Displays text, typically a single character,
+# # based on the status of the previous command.
+# [character]
+# success_symbol = "[▶](bold green)" # normal prompt
+# error_symbol = "[✗](bold red)" # used if previous command failed
+# # error_symbol does not work in Nushell
+
+# # Displays current directory.
+# [directory]
+# format = "[$path]($style)"
+# style = "yellow"
+# truncate_to_repo = false
+# truncation_length = 3 # parent directories to show; default is 3
+# truncation_symbol = "…/"
+
+# # Displays current Git branch when in a directory of a Git repository.
+# [git_branch]
+# format = "[$symbol](green)[$branch]($style)"
+# style = "italic green"
+# symbol = ""
+
+# # Displays status of Git repository when in a directory of a Git repository.
+# [git_status]
+# format = "[$all_status$ahead_behind]($style)"
+# ahead = "⇡ $count "
+# behind = "⇣ $count "
+# deleted = "🗑 $count "
+# diverged = " $count "
+# stashed = "📦 $count "
+# modified = "פֿ $count "
+# staged = '[ $count ](green)'
+# renamed = " $count "
+# untracked = "🤷 ‍$count "
+# style = "bold red"
+
+# Enable the Kubernetes module
+# [kubernetes]
+# disabled = false
+# symbol = "☸ "
+# format = '[ $symbol$context( \($namespace\)) ]($style) in '
+# style = "cyan bold"
+
+
+
+
+
+
+# [username]
+# style_user = "bold blue"
+# show_always = true
+
+
+
+# [git_branch]
+# format = " [$symbol$branch]($style) "
+# symbol = "🍣 "
+# style = "bold yellow"
+
+# [git_commit]
+# commit_hash_length = 8
+# style = "bold white"
+
+# [git_state]
+# format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+# [git_status]
+# conflicted = "⚔️ "
+# ahead = "🏎️ 💨 ×${count}"
+# behind = "🐢 ×${count}"
+# diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+# untracked = "🛤️  ×${count}"
+# stashed = "📦 "
+# modified = "📝 ×${count}"
+# staged = "🗃️  ×${count}"
+# renamed = "📛 ×${count}"
+# deleted = "🗑️  ×${count}"
+# style = "bright-white"
+# format = "$all_status$ahead_behind"
+
+
+# [battery]
+# full_symbol = "🔋"
+# charging_symbol = "🔌"
+# discharging_symbol = "⚡"
+# disabled = true
+
+# [[battery.display]]
+# threshold = 30
+# style = "bold red"
+# disabled = true
+
+# [character]
+# error_symbol = "[✖](bold red) "
+
+# [cmd_duration]
+# min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+# format = " took [$duration]($style)"
+# disabled = true
+
+# [directory]
+# truncation_length = 5
+# format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+
+
+# [hostname]
+# ssh_only = false
+# format = "<[$hostname]($style)>"
+# trim_at = "-"
+# style = "bold dimmed white"
+# disabled = true
+
+# [julia]
+# format = "[$symbol$version]($style) "
+# symbol = "ஃ "
+# style = "bold green"
+# disabled = true
+
+# [memory_usage]
+# format = "$symbol[${ram}( | ${swap})]($style) "
+# threshold = 70
+# style = "bold dimmed white"
+# disabled = true
+
+# [package]
+# disabled = true
+
+# [python]
+# format = "[$symbol$version]($style) "
+# style = "bold green"
+# disabled = true
+
+# [rust]
+# format = "[$symbol$version]($style) "
+# style = "bold green"
+# disabled = true
+
+# [time]
+# time_format = "%T"
+# format = "🕙 $time($style) "
+# style = "bright-white"
+# disabled = true
+
+# [username]
+# style_user = "bold dimmed blue"
+# show_always = false
+
+# [nodejs]
+# format = "via [🤖 $version](bold green) "
+# disabled = true
+
