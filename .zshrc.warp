@@ -1,21 +1,6 @@
 # Helsana
 source ~/.helsana_variables
-
-# https://ohmyposh.dev/docs/installation/macos
-# https://ohmyposh.dev/docs/installation/prompt
-# brew install jandedobbeleer/oh-my-posh/oh-my-posh
-# brew update && brew upgrade && exec zsh
-# https://github.com/JanDeDobbeleer/oh-my-posh
-# https://ohmyposh.dev/docs/themes
-if [[ $TERM_PROGRAM == "WarpTerminal" ]]; then
-    ZSH_THEME="Agnoster"
-#     eval "$(oh-my-posh init zsh --config ~/dotfiles/oh-my-posh/themes/jandedobbeleer.omp.json)"
-#     eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
-else
-    ZSH_THEME="powerlevel10k/powerlevel10k"
-    # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-fi
+source ~/.helsana_aliases
 
 # Node
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
@@ -37,10 +22,12 @@ plugins=(
 	history
 	gradle
 	helm
+    kube-ps1
 )
 
 # DOTFILES
 source ~/dotfiles/.aliases
+source ~/.variables
 
 # OH-MY-ZSH
 source ~/.oh-my-zsh/oh-my-zsh.sh
@@ -51,9 +38,13 @@ source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 # SDKMAN
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+source /Users/hkesq/.docker/init-zsh.sh || true # Added by Docker Desktop
+autoload -U compinit; compinit
+
+# Starship
+eval "$(starship init zsh)"
 
 ###
 ### Adding Java Tool Options to support Helsana trusted root cas
 ###
-
-export JAVA_TOOL_OPTIONS="-Djavax.net.ssl.trustStore=/Users/hkesq/.ssl-java/truststore.p12 -Djavax.net.ssl.trustStorePassword=changeme -Djavax.net.ssl.trustStoreType=PKCS12"
+export JAVA_TOOL_OPTIONS="-Djavax.net.ssl.trustStore=/Users/hkesq/.ssl-java/truststore.p12 -Djavax.net.ssl.trustStorePassword=changeme -Djavax.net.ssl.trustStoreType=PKCS12 -Dfile.encoding=UTF-8"
