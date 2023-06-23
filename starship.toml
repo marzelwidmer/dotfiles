@@ -41,7 +41,7 @@ format = " | [$symbol$branch]($style) "
 [git_status]
 untracked = "[  ×${count}](italic red)"
 modified = "[  ×${count}](italic red)"
-staged = "[ + ×${count}](italic green)"
+staged = "[  ×${count}](italic green)"
 stashed = "[ ≡ ×${count}](italic blue)"
 behind = "[ ⇣ ×${count}](italic red)"
 ahead = "[ ⇡ ×${count}](italic green)"
