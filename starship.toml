@@ -37,7 +37,7 @@ truncation_symbol = "…/"
 [git_branch]
 format = " | [$symbol$branch]($style) "
 
-# FiraCode Nerd hint: also in warp.
+# FiraCode Nerd hint: also in terminal
 [git_status]
 untracked = "[  ×${count}](italic red)"
 modified = "[  ×${count}](italic red)"
