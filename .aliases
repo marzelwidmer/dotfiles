@@ -3,6 +3,8 @@ alias kctx=kubectx
 alias goGitHubDevHome="cd ~/dev/github"
 alias goAzureDevHome="cd ~/dev/azure"
 
+alias vi='nvim'
+
 # Kubernetes
 # brew install dty1er/tap/kubecolor
 alias k=kubecolor
