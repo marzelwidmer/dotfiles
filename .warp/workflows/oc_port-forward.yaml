@@ -1,0 +1,10 @@
+name: K8s POD port forward
+command: oc port-forward "$(oc get po | grep {{pod_name}} | head -n1 | cut -d" " -f1)"  {{local_port}}:{{remote_port}}
+arguments:
+  - name: pod_name
+    description: The name of the pod
+  - name: local_port
+    description: local port
+  - name: remote_port
+    description: remote port
+tags: ["kubectl"]
