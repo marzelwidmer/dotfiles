@@ -66,6 +66,7 @@ set copyindent
 set updatetime=500
 set scrolloff=5
 set expandtab
+set relativenumber
 
 
 if (has("termguicolors"))
