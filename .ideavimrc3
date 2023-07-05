@@ -1,0 +1,123 @@
+source ~/.config/nvim/init.vim
+
+let mapleader = " "
+
+""" Idea Settings ---------------------------------------------------
+set ideajoin
+set ideamarks
+
+""" Plugins  --------------------------------------------------------
+set surround
+set highlightedyank
+set NERDTree
+set multiple-cursors
+set commentary
+set easymotion
+set vim-paragraph-motion
+set textobj-indent
+set textobj-entire
+set argtextobj
+set ReplaceWithRegister
+set exchange
+
+""" Vim Settings ----------------------------------------------------
+set relativenumber
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+""" Plugins Settings ------------------------------------------------
+" Reload
+nnoremap <leader>sr :source ~/.ideavimrc<CR>
+
+" use jk to exit insert mode
+:inoremap jk <Esc>
+
+" window management
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+
+" Pasting from yank history
+nnoremap <leader>pm :action PasteMultiple<CR>
+
+" Refactorings ------------------------------------------------------
+nnoremap <leader>roi :action OptimizeImports<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rf :action ReformatCode<CR>
+
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>ri :action Inline<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>rim :action ImplementMethods<CR>
+nnoremap <leader>rom :action OverrideMethods<CR>
+
+" GoTo --------------------------------------------------------------
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gs :action ActivateStructureToolWindow<CR>
+nnoremap <leader>sp :action ParameterInfo<CR>
+nnoremap <leader>si :action Scala.ShowImplicitArguments<CR>
+nnoremap <leader>sd :action QuickImplementations<CR>
+
+" Search -----------------------------------------------------------
+nnoremap <leader>fs :action GotoSymbol<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>fg :action FindInPath<CR>
+nnoremap <leader>fr :action ReplaceInPath<CR>
+"-- clear search highlights
+nnoremap <Leader>nh :noh<CR>
+
+" Test and Run -----------------------------------------------------
+nnoremap <leader>tg :action GotoTest<CR>
+nnoremap <leader>tn :action RunClass<CR>
+nnoremap <leader>tl :action Rerun<CR>
+nnoremap <leader>tf :action RerunFailedTests<CR>
+nnoremap <leader>tr :action Run<CR>
+nnoremap <leader>td :action Debug<CR>
+nnoremap <leader>tc :action RunCoverage<CR>
+
+" Undo -------------------------------------------------------------
+nnoremap <leader>uh :action LocalHistory.ShowHistory<CR>
+
+" Jumping ----------------------------------------------------------
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+
+" Navigation -------------------------------------------------------
+nnoremap ]c :action GotoNextError<cr>
+nnoremap [c :action GotoPreviousError<cr>
+nnoremap ]h :action VcsShowNextChangeMarker<cr>
+nnoremap [h :action VcsShowPrevChangeMarker<cr>
+
+" Git ---------------------------------------------------------------
+nnoremap <leader>gm :action Git.Menu<CR>
+nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>gr :action ChangesView.Revert<CR>
+nnoremap <leader>gb :action Git.CompareWithBranch<CR>
+
+" System clipboard --------------------------------------------------
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" Multiple cursor --------------------------------------------------
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+
+
