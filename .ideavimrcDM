@@ -1,0 +1,85 @@
+set ignorecase
+set incsearch
+set highlightedyank
+set ideajoin
+set NERDTree
+set multiple-cursors
+
+let mapleader = " "
+
+nnoremap <leader>sv :source ~/.ideavimrc<CR>
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>o :action GotoFile<CR>
+nnoremap <leader>O :action GotoClass<CR>
+nnoremap <leader>f :action FindInPath<CR>
+nnoremap <leader>b :action RecentFiles<CR>
+nnoremap <leader>B :action RecentLocations<CR>
+nnoremap <leader>c :action CommentByLineComment<CR>
+nnoremap <leader>= :action ReformatCode<CR>
+nnoremap <leader>i :action OptimizeImports<CR>
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>h :action CallHierarchy<CR>
+
+" next and previous buffers
+nnoremap <leader>H :bp<CR>
+nnoremap <leader>L :bn<CR>
+
+nnoremap <leader>l :vsplit<CR>
+nnoremap <leader>j :split<CR>
+
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gr :action GotoRelated<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gu :action ShowUsages<CR>
+nnoremap gU :action FindUsages<CR>
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+nnoremap ,r :action Run<CR>
+nnoremap ,R :action ChooseRunConfiguration<CR>
+nnoremap ,d :action Debug<CR>
+nnoremap ,D :action ChooseDebugConfiguration<CR>
+ " useful for tests, runs whole class
+nnoremap ,t :action RunClass<CR>
+ " useful for tests, runs test under cursor
+nnoremap ,T :action ContextRun<CR>
+nnoremap ,s :action Stop<CR>
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+nnoremap zr :action EditorResetFontSize<CR>
+nnoremap zi :action EditorIncreaseFontSize<CR>
+nnoremap zd :action EditorDecreaseFontSize<CR>
+
+nnoremap <c-x> :action HideActiveWindow<CR>
+nnoremap <c-p> :action JumpToLastWindow<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+nmap <C-x> <Plug>SkipOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+nmap <C-p> <Plug>RemoveOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+nmap <S-C-n> <Plug>AllWholeOccurrences
+xmap <S-C-n> <Plug>AllWholeOccurrences
+nmap g<S-C-n> <Plug>AllOccurrences
+xmap g<S-C-n> <Plug>AllOccurrences
