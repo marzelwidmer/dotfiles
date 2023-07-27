@@ -96,7 +96,7 @@ nnoremap <c-i> :action Forward<cr>
 nnoremap ]c :action GotoNextError<cr>
 nnoremap [c :action GotoPreviousError<cr>
 nnoremap ]h :action VcsShowNextChangeMarker<cr>
-nnoremap [h :action VcsShowPrevChangeMarker<cr>
+nnoremap <c-[> :action PreviousTab
 
 " Git ---------------------------------------------------------------
 nnoremap <leader>gm :action Git.Menu<CR>
