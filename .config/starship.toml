@@ -2,7 +2,17 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_commit\
+$git_metrics\
+(#9A348E)$kubernetes\
+$time\
+$character\
+"""
 
 
 # Drop ugly default prompt characters
@@ -13,7 +23,7 @@ error_symbol = ''
 # ---
 
 [os]
-format = '[$symbol](bold white) '   
+format = '[$symbol](bold white) '
 disabled = false
 
 [os.symbols]
@@ -53,7 +63,7 @@ truncation_symbol = '…/'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
-format = '| [$path]($style)[$read_only]($read_only_style) '
+format = '[$path]($style)[$read_only]($read_only_style) '
 
 
 
@@ -68,26 +78,57 @@ style = 'bold green'
 
 
 # Shows current git status
+#[git_status]
+#format = '[$all_status$ahead_behind]($style) '
+#style = 'bold green'
+#conflicted = '🏳'
+#up_to_date = ''
+#untracked = ' '
+#ahead = '⇡${count}'
+#diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+#behind = '⇣${count}'
+#stashed = ' '
+#modified = ' '
+#staged = '[++\($count\)](green)'
+#renamed = '襁 '
+#deleted = ' '
+
+# FiraCode Nerd hint: also in terminal
+#[git_status]
+#untracked = "[  ×${count}](italic red)"
+#modified = "[  ×${count}](italic red)"
+#staged = "[  ×${count}](italic green)"
+#stashed = "[ ≡ ×${count}](italic blue)"
+#behind = "[ ⇣ ×${count}](italic red)"
+#ahead = "[ ⇡ ×${count}](italic green)"
+#conflicted = "[ ﮏ ×${count}](italic red)"
+#diverged = "[  ×${ahead_count}](italic red) 🐢 ×${behind_count}"
+#renamed = "[  ×${count}](italic red)"
+#deleted = "[ ✘ ×${count}](italic red)"
+#style = "bright-white"
+#format = "$all_status$ahead_behind"
+
+
+# FiraCode Nerd hint: also in terminal
+# Shows current git status
 [git_status]
-format = '[$all_status$ahead_behind]($style) '
+format = ' [$all_status$ahead_behind]($style) '
 style = 'bold green'
 conflicted = '🏳'
 up_to_date = ''
-untracked = ' '
+untracked = '${count}'
 ahead = '⇡${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
-stashed = ' '
-modified = ' '
+stashed = '${count}'
+modified = '${count}'
 staged = '[++\($count\)](green)'
-renamed = '襁 '
-deleted = ' '
-
+renamed = '襁${count}'
+deleted = '${count}'
 
 # Shows kubernetes context and namespace
 [kubernetes]
-format = '| [󱃾 $context\($namespace\)](bold purple) '
-#format = ' | [☸](fg:#86BBD8) [$namespace](bold purple) | '
+format = ' | [☸](fg:#86BBD8) [$namespace](bold purple) | '
 disabled = false
 
 
