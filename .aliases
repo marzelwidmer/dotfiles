@@ -3,8 +3,12 @@ alias kctx=kubectx
 alias goGitHubDevHome="cd ~/dev/github"
 alias goDevHome="cd ~/dev/"
 alias mon=bpytop
-
-
+alias cd=z
+alias ls=exa
+alias ll="exa -alh"
+alias tree="exa --tree"
+alias cat="bat"
+alias lgit="lazygit"
 alias vi='nvim'
 
 # Kubernetes
