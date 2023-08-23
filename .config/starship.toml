@@ -14,11 +14,10 @@ $time\
 $character\
 """
 
-
 # Drop ugly default prompt characters
 [character]
-success_symbol = ''
-error_symbol = ''
+success_symbol = "[▶](bold green)"
+error_symbol = "[✗](bold red)"
 
 # ---
 
@@ -32,8 +31,7 @@ Arch = '󰣇'
 Ubuntu = ''
 Macos = '󰀵'
 
-# ---y
-
+# ---
 
 [time]
 disabled = false
@@ -55,7 +53,6 @@ ssh_only = false
 format = 'on [$hostname](bold yellow) '
 disabled = false
 
-
 # Shows current directory
 [directory]
 truncation_length = 1
@@ -69,10 +66,8 @@ format = '[$path]($style)[$read_only]($read_only_style) '
 [git_branch]
 symbol = ' '
 format = ' [$symbol$branch]($style)'
-# truncation_length = 4
 truncation_symbol = '…/'
 style = 'bold green'
-
 
 # FiraCode Nerd hint: also in terminal
 # Shows current git status
