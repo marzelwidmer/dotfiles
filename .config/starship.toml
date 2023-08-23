@@ -1,7 +1,8 @@
 # ~/.config/starship.toml
 
 add_newline = false
-command_timeout = 1000
+scan_timeout = 10_000
+command_timeout = 10_000
 
 format = """
 $directory\
