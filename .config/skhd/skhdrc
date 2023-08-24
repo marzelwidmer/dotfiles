@@ -38,7 +38,7 @@ alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 ctrl + alt - m : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-ctrl + alt - e : yabai -m space --balance
+ctrl + alt - b : yabai -m space --balance
 
 # change window sizes
 shift + ctrl + alt - h : yabai -m window --resize left:-20:0 ; yabai -m window --resize right:-20:0
@@ -96,11 +96,12 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 
-# -- OSX hacks --
+# -- osx hacks --
 
-# disable OSX hide window
+# disable osx hide window
 cmd - h : :
-# disable OSX minimize window
+# disable osx minimize window
 alt + cmd - m : :
+cmd - m : :
 
 
