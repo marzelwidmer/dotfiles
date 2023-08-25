@@ -15,7 +15,7 @@ set commentary
 set easymotion
 set vim-paragraph-motion
 set textobj-indent
-set textobj-entireΩΩ
+set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 set exchange
@@ -117,3 +117,5 @@ vmap <leader>P "+P
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
+
+
