@@ -1,21 +1,110 @@
-set number relativenumber
-set idearefactormode=keep
-set ideajoin
-set surround
-set easymotion
+source ~/.config/nvim/init.vim
 
 let mapleader = " "
 
-noremap <Esc> <nop>
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+""" Idea Settings ---------------------------------------------------
+set ideajoin
+set ideamarks
 
-nnoremap <C-j> :m +1<CR>
-nnoremap <C-k> :m -2<CR>
-inoremap <C-j> <Esc>:m +1<CR>gi
-inoremap <C-k> <Esc>:m -2<CR>gi
+""" Plugins  --------------------------------------------------------
+set surround
+set highlightedyank
+set NERDTree
+set multiple-cursors
+set commentary
+set easymotion
+set vim-paragraph-motion
+set textobj-indent
+set textobj-entireΩΩ
+set argtextobj
+set ReplaceWithRegister
+set exchange
 
-" system clipboard
+""" Vim Settings ----------------------------------------------------
+set relativenumber
+set incsearch
+set ignorecase
+set smartcase
+set incsearch
+"set hlsearch
+"-- clear search highlights
+nnoremap <Leader>nh :noh<CR>
+
+""" Plugins Settings ------------------------------------------------
+" Reload
+nnoremap <leader>sr :source ~/.ideavimrc<CR>
+
+" use jk to exit insert mode
+:inoremap jk <Esc>
+
+
+" project view (CMD+1)
+nnoremap <leader>p :NERDTree<CR>
+nnoremap <leader>pc :NERDTreeClose<CR>
+nnoremap <leader>pt :NERDTreeToggle<CR>
+nnoremap <leader>pf :NERDTreeFocus<CR>
+
+" window management
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+
+" Pasting from yank history
+nnoremap <leader>pm :action PasteMultiple<CR>
+
+" Refactorings ------------------------------------------------------
+nnoremap <leader>roi :action OptimizeImports<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rf :action ReformatCode<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+
+nnoremap <leader>ri :action Inline<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>rim :action ImplementMethods<CR>
+nnoremap <leader>rom :action OverrideMethods<CR>
+
+" GoTo --------------------------------------------------------------
+nnoremap <leader>gd :action GotoDeclaration<CR>
+nnoremap <leader>fu :action FindUsages<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>pi :action ParameterInfo<CR>
+nnoremap <leader>sd :action QuickImplementations<CR>
+
+" Search -----------------------------------------------------------
+nnoremap <leader>fs :action GotoSymbol<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>fp :action FindInPath<CR>
+nnoremap <leader>rp :action ReplaceInPath<CR>
+
+
+" Run -----------------------------------------------------
+nnoremap <leader>rc :action RunClass<CR>
+nnoremap <leader>tr :action Run<CR>
+nnoremap <leader>td :action Debug<CR>
+
+" Test -----------------------------------------------------
+nnoremap <leader>tg :action GotoTest<CR>
+nnoremap <leader>tf :action RerunFailedTests<CR>
+
+" Undo -------------------------------------------------------------
+nnoremap <leader>uh :action LocalHistory.ShowHistory<CR>
+
+" Jumping ----------------------------------------------------------
+" built-in navigation to navigated items works better
+nnoremap <c-b> :action Back<cr>
+nnoremap <c-f> :action Forward<cr>
+
+" Git ---------------------------------------------------------------
+nnoremap <leader>gm :action Git.Menu<CR>
+nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>gr :action ChangesView.Revert<CR>
+nnoremap <leader>gb :action Git.CompareWithBranch<CR>
+
+" System clipboard --------------------------------------------------
 vmap <leader>y "+y
 vmap <leader>d "+d
 nmap <leader>y "+yy
@@ -24,23 +113,7 @@ nmap <leader>P "+P
 vmap <leader>p "+p
 vmap <leader>P "+P
 
-" scrolling
-nmap <leader>d <C-d>
-nmap <leader>u <C-u>
-vmap <leader>d <C-d>
-vmap <leader>u <C-u>
-
-" actions
-nmap <leader>h <action>(PreviousTab)
-nmap <leader>l <action>(NextTab)
-nmap <leader>bd <action>(CloseEditor)
-nmap <leader>i <action>(Generate)
-nmap <leader>m <action>(Git.Menu)
-nmap <leader>s <action>(QuickChangeScheme)
-nmap <leader>/ <action>(ShowErrorDescription)
-nmap <leader>e <action>(GotoNextError)
-nnoremap <leader><leader> <C-Tab>
-
-set NERDTree
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
+" Multiple cursor --------------------------------------------------
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
