@@ -12,7 +12,7 @@ alias lgit="lazygit"
 alias lg="lazygit"
 alias vi='nvim'
 
-alias python="/usr/bin/python3"
+alias python="/opt/homebrew/bin/python3"
 
 
 # Kubernetes
