@@ -57,7 +57,6 @@ nnoremap <leader>rn :action RenameElement<CR>
 nnoremap <leader>rf :action ReformatCode<CR>
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>rv :action IntroduceVariable<CR>
-
 nnoremap <leader>ri :action Inline<CR>
 nnoremap <leader>rm :action ExtractMethod<CR>
 nnoremap <leader>rp :action IntroduceParameter<CR>
@@ -65,11 +64,33 @@ nnoremap <leader>rim :action ImplementMethods<CR>
 nnoremap <leader>rom :action OverrideMethods<CR>
 
 " GoTo --------------------------------------------------------------
-nnoremap <leader>gd :action GotoDeclaration<CR>
-nnoremap <leader>fu :action FindUsages<CR>
-nnoremap <leader>gi :action GotoImplementation<CR>
-nnoremap <leader>pi :action ParameterInfo<CR>
-nnoremap <leader>sd :action QuickImplementations<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gr :action GotoRelated<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gu :action ShowUsages<CR>
+nnoremap gU :action FindUsages<CR>
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <leader>zc :action CollapseAllRegions<CR>
+nnoremap <leader>zo :action ExpandAllRegions<CR>
+
+nnoremap zr :action EditorResetFontSize<CR>
+nnoremap zi :action EditorIncreaseFontSize<CR>
+nnoremap zd :action EditorDecreaseFontSize<CR>
+
+nnoremap <c-x> :action HideActiveWindow<CR>
+nnoremap <c-p> :action JumpToLastWindow<CR>
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
 " Search -----------------------------------------------------------
 nnoremap <leader>fs :action GotoSymbol<CR>
@@ -82,20 +103,19 @@ nnoremap <leader>rp :action ReplaceInPath<CR>
 
 " Run -----------------------------------------------------
 nnoremap <leader>rc :action RunClass<CR>
-nnoremap <leader>tr :action Run<CR>
-nnoremap <leader>td :action Debug<CR>
+nnoremap ,r :action Run<CR>
+nnoremap ,R :action ChooseRunConfiguration<CR>
+nnoremap ,d :action Debug<CR>
+nnoremap ,D :action ChooseDebugConfiguration<CR>
+ " useful for tests, runs whole class
+nnoremap ,t :action RunClass<CR>
+ " useful for tests, runs test under cursor
+nnoremap ,T :action ContextRun<CR>
+nnoremap ,s :action Stop<CR>
 
-" Test -----------------------------------------------------
-nnoremap <leader>tg :action GotoTest<CR>
-nnoremap <leader>tf :action RerunFailedTests<CR>
 
 " Undo -------------------------------------------------------------
 nnoremap <leader>uh :action LocalHistory.ShowHistory<CR>
-
-" Jumping ----------------------------------------------------------
-" built-in navigation to navigated items works better
-nnoremap <c-b> :action Back<cr>
-nnoremap <c-f> :action Forward<cr>
 
 " Git ---------------------------------------------------------------
 nnoremap <leader>gm :action Git.Menu<CR>
