@@ -12,6 +12,9 @@ alias lgit="lazygit"
 alias lg="lazygit"
 alias vi='nvim'
 
+alias python="/usr/bin/python3"
+
+
 # Kubernetes
 # brew install dty1er/tap/kubecolor
 alias k=kubecolor
