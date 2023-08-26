@@ -1,8 +1,7 @@
 # ~/.config/starship.toml
 
 add_newline = false
-scan_timeout = 10_000
-command_timeout = 10_000
+command_timeout = 1000
 
 format = """
 $directory\
@@ -33,6 +32,11 @@ Ubuntu = ''
 Macos = '󰀵'
 
 # ---
+# Shows kubernetes context and namespace
+[kubernetes]
+format = ' | [☸ ($cluster)](fg:#86BBD8) [| ⛵$namespace](bold purple) | '
+disabled = false
+
 
 [time]
 disabled = false
@@ -86,12 +90,6 @@ modified = '${count}'
 staged = '[++\($count\)](green)'
 renamed = '襁${count}'
 deleted = '${count}'
-
-# Shows kubernetes context and namespace
-[kubernetes]
-format = ' | [☸](fg:#86BBD8) [$namespace](bold purple) | '
-disabled = false
-
 
 # ---
 
