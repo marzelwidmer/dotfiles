@@ -39,7 +39,7 @@ nnoremap <leader>sr :source ~/.ideavimrc<CR>
 
 
 " project view (CMD+1)
-nnoremap <leader>pv :NERDTree<CR>
+nnoremap <leader>p :NERDTree<CR>
 nnoremap <leader>pc :NERDTreeClose<CR>
 nnoremap <leader>pt :NERDTreeToggle<CR>
 nnoremap <leader>pf :NERDTreeFocus<CR>
