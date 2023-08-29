@@ -4,6 +4,7 @@ set highlightedyank
 set ideajoin
 set NERDTree
 set multiple-cursors
+set commentary " comment lines with gcc / gc in visual mode
 
 let mapleader = " "
 
@@ -16,13 +17,13 @@ nnoremap <leader>O :action GotoClass<CR>
 nnoremap <leader>f :action FindInPath<CR>
 nnoremap <leader>b :action RecentFiles<CR>
 nnoremap <leader>B :action RecentLocations<CR>
-nnoremap <leader>c :action CommentByLineComment<CR>
 nnoremap <leader>= :action ReformatCode<CR>
 nnoremap <leader>i :action OptimizeImports<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 
 " next and previous buffers
+
 nnoremap <leader>H :bp<CR>
 nnoremap <leader>L :bn<CR>
 
