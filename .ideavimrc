@@ -1,5 +1,3 @@
-source ~/.config/nvim/init.vim
-
 let mapleader = " "
 
 """ Idea Settings ---------------------------------------------------
@@ -11,7 +9,6 @@ set surround
 set highlightedyank
 set NERDTree
 set multiple-cursors
-set commentary
 set easymotion
 set vim-paragraph-motion
 set textobj-indent
@@ -19,6 +16,7 @@ set textobj-entire
 set argtextobj
 set ReplaceWithRegister
 set exchange
+set commentary " comment lines with gcc / gc in visual mode
 
 """ Vim Settings ----------------------------------------------------
 set relativenumber
@@ -27,115 +25,9 @@ set ignorecase
 set smartcase
 set incsearch
 "set hlsearch
-"-- clear search highlights
-nnoremap <Leader>nh :noh<CR>
 
 """ Plugins Settings ------------------------------------------------
 " Reload
-nnoremap <leader>sr :source ~/.ideavimrc<CR>
+nnoremap <leader>so :source ~/.ideavimrc<CR>
 
-" use jk to exit insert mode
-:inoremap jk <Esc>
-
-
-" project view (CMD+1)
-nnoremap <leader>p :NERDTree<CR>
-nnoremap <leader>pc :NERDTreeClose<CR>
-nnoremap <leader>pt :NERDTreeToggle<CR>
-nnoremap <leader>pf :NERDTreeFocus<CR>
-
-" window management
-nnoremap <leader>sv :action SplitVertically<CR>
-nnoremap <leader>sh :action SplitHorizontally<CR>
-
-" Pasting from yank history
-nnoremap <leader>pm :action PasteMultiple<CR>
-
-" Refactorings ------------------------------------------------------
-nnoremap <leader>roi :action OptimizeImports<CR>
-nnoremap <leader>rn :action RenameElement<CR>
-nnoremap <leader>rf :action ReformatCode<CR>
-nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>rv :action IntroduceVariable<CR>
-nnoremap <leader>ri :action Inline<CR>
-nnoremap <leader>rm :action ExtractMethod<CR>
-nnoremap <leader>rp :action IntroduceParameter<CR>
-nnoremap <leader>rim :action ImplementMethods<CR>
-nnoremap <leader>rom :action OverrideMethods<CR>
-
-" GoTo --------------------------------------------------------------
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gp :action GotoSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
-nnoremap gr :action GotoRelated<CR>
-nnoremap gb :action Back<CR>
-nnoremap gf :action Forward<CR>
-nnoremap ge :action GotoNextError<CR>
-nnoremap gE :action GotoPreviousError<CR>
-nnoremap gu :action ShowUsages<CR>
-nnoremap gU :action FindUsages<CR>
-nnoremap [[ :action MethodUp<CR>
-nnoremap ]] :action MethodDown<CR>
-
-
-nnoremap zc :action CollapseRegion<CR>
-nnoremap zo :action ExpandRegion<CR>
-nnoremap <leader>zc :action CollapseAllRegions<CR>
-nnoremap <leader>zo :action ExpandAllRegions<CR>
-
-nnoremap zr :action EditorResetFontSize<CR>
-nnoremap zi :action EditorIncreaseFontSize<CR>
-nnoremap zd :action EditorDecreaseFontSize<CR>
-
-nnoremap <c-x> :action HideActiveWindow<CR>
-nnoremap <c-p> :action JumpToLastWindow<CR>
-nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
-
-" Search -----------------------------------------------------------
-nnoremap <leader>fs :action GotoSymbol<CR>
-nnoremap <leader>ff :action GotoFile<CR>
-nnoremap <leader>fc :action GotoClass<CR>
-nnoremap <leader>fa :action GotoAction<CR>
-nnoremap <leader>fp :action FindInPath<CR>
-nnoremap <leader>rp :action ReplaceInPath<CR>
-
-
-" Run -----------------------------------------------------
-nnoremap <leader>rc :action RunClass<CR>
-nnoremap ,r :action Run<CR>
-nnoremap ,R :action ChooseRunConfiguration<CR>
-nnoremap ,d :action Debug<CR>
-nnoremap ,D :action ChooseDebugConfiguration<CR>
- " useful for tests, runs whole class
-nnoremap ,t :action RunClass<CR>
- " useful for tests, runs test under cursor
-nnoremap ,T :action ContextRun<CR>
-nnoremap ,s :action Stop<CR>
-
-
-" Undo -------------------------------------------------------------
-nnoremap <leader>uh :action LocalHistory.ShowHistory<CR>
-
-" Git ---------------------------------------------------------------
-nnoremap <leader>gm :action Git.Menu<CR>
-nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
-nnoremap <leader>ga :action Annotate<CR>
-nnoremap <leader>gr :action ChangesView.Revert<CR>
-nnoremap <leader>gb :action Git.CompareWithBranch<CR>
-
-" System clipboard --------------------------------------------------
-vmap <leader>y "+y
-vmap <leader>d "+d
-nmap <leader>y "+yy
-nmap <leader>p "+p
-nmap <leader>P "+P
-vmap <leader>p "+p
-vmap <leader>P "+P
-
-" Multiple cursor --------------------------------------------------
-map mc <A-n>
-map mx <A-x>
-map mp <A-p>
-
-
+nnoremap <leader>ioi :action OptimizeImports<CR>
